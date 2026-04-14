@@ -7,25 +7,58 @@ export default function Download() {
     <section
       id="download"
       style={{
-        background: "var(--bg)",
+        background: "var(--green-900)",
         padding: "100px 24px",
         textAlign: "center",
+        position: "relative",
+        overflow: "hidden",
       }}
     >
-      <div style={{ maxWidth: "600px", margin: "0 auto" }}>
-        {/* Logo mark */}
-        <div style={{ marginBottom: "32px", display: "flex", justifyContent: "center" }}>
-          <Image
-            src="/assets/Green_Logo_Trans.png"
-            alt="The Clubhouse"
-            width={80}
-            height={80}
-            style={{ objectFit: "contain", width: "80px", height: "80px" }}
-            onError={(e) => {
-              const t = e.currentTarget as HTMLImageElement;
-              t.style.display = "none";
+      {/* Subtle dot texture */}
+      <div
+        aria-hidden
+        style={{
+          position: "absolute",
+          inset: 0,
+          backgroundImage: `radial-gradient(circle, rgba(250,247,242,0.03) 1px, transparent 1px)`,
+          backgroundSize: "24px 24px",
+          pointerEvents: "none",
+        }}
+      />
+
+      <div style={{ maxWidth: "600px", margin: "0 auto", position: "relative", zIndex: 1 }}>
+
+        {/* Glowing logo medallion */}
+        <div
+          style={{
+            marginBottom: "36px",
+            display: "flex",
+            justifyContent: "center",
+          }}
+        >
+          <div
+            style={{
+              width: "160px",
+              height: "160px",
+              borderRadius: "50%",
+              overflow: "hidden",
+              boxShadow: "0 0 60px rgba(250,247,242,0.12), 0 0 120px rgba(42,92,64,0.4)",
+              flexShrink: 0,
             }}
-          />
+          >
+            <Image
+              src="/assets/golf_logo_C.png"
+              alt="The Clubhouse"
+              width={160}
+              height={160}
+              style={{
+                objectFit: "cover",
+                width: "160px",
+                height: "160px",
+                mixBlendMode: "screen",
+              }}
+            />
+          </div>
         </div>
 
         <h2
@@ -33,7 +66,7 @@ export default function Download() {
             fontFamily: "var(--font-playfair), Georgia, serif",
             fontSize: "clamp(32px, 5vw, 52px)",
             fontWeight: 800,
-            color: "var(--green-800)",
+            color: "var(--bg)",
             lineHeight: 1.12,
             letterSpacing: "-0.02em",
             marginBottom: "16px",
@@ -46,7 +79,7 @@ export default function Download() {
           style={{
             fontFamily: "var(--font-dm-sans), sans-serif",
             fontSize: "19px",
-            color: "var(--text-secondary)",
+            color: "rgba(250,247,242,0.65)",
             lineHeight: 1.65,
             marginBottom: "40px",
           }}
@@ -64,6 +97,42 @@ export default function Download() {
             marginBottom: "32px",
           }}
         >
+          {/* iOS */}
+          <a
+            href="#"
+            style={{
+              display: "inline-flex",
+              alignItems: "center",
+              gap: "10px",
+              fontFamily: "var(--font-dm-sans), sans-serif",
+              fontSize: "16px",
+              fontWeight: 600,
+              color: "var(--green-900)",
+              background: "var(--bg)",
+              padding: "15px 32px",
+              borderRadius: "10px",
+              textDecoration: "none",
+              boxShadow: "0 2px 16px rgba(0,0,0,0.35)",
+              transition: "background 0.2s, transform 0.15s",
+            }}
+            onMouseEnter={(e) => {
+              const el = e.currentTarget as HTMLAnchorElement;
+              el.style.background = "var(--green-50)";
+              el.style.transform = "translateY(-2px)";
+            }}
+            onMouseLeave={(e) => {
+              const el = e.currentTarget as HTMLAnchorElement;
+              el.style.background = "var(--bg)";
+              el.style.transform = "translateY(0)";
+            }}
+          >
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+            </svg>
+            Download for iOS
+          </a>
+
+          {/* Android */}
           <a
             href="#"
             style={{
@@ -74,53 +143,22 @@ export default function Download() {
               fontSize: "16px",
               fontWeight: 600,
               color: "var(--bg)",
-              background: "var(--green-600)",
-              padding: "15px 32px",
-              borderRadius: "10px",
-              textDecoration: "none",
-              boxShadow: "0 2px 12px rgba(42,92,64,0.28)",
-              transition: "background 0.2s, transform 0.15s",
-            }}
-            onMouseEnter={(e) => {
-              const el = e.currentTarget as HTMLAnchorElement;
-              el.style.background = "var(--green-700)";
-              el.style.transform = "translateY(-2px)";
-            }}
-            onMouseLeave={(e) => {
-              const el = e.currentTarget as HTMLAnchorElement;
-              el.style.background = "var(--green-600)";
-              el.style.transform = "translateY(0)";
-            }}
-          >
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
-            </svg>
-            Download for iOS
-          </a>
-          <a
-            href="#"
-            style={{
-              display: "inline-flex",
-              alignItems: "center",
-              gap: "10px",
-              fontFamily: "var(--font-dm-sans), sans-serif",
-              fontSize: "16px",
-              fontWeight: 600,
-              color: "var(--green-600)",
               background: "transparent",
               padding: "14px 32px",
               borderRadius: "10px",
               textDecoration: "none",
-              border: "2px solid var(--green-600)",
-              transition: "background 0.2s, transform 0.15s",
+              border: "2px solid rgba(250,247,242,0.35)",
+              transition: "border-color 0.2s, background 0.2s, transform 0.15s",
             }}
             onMouseEnter={(e) => {
               const el = e.currentTarget as HTMLAnchorElement;
-              el.style.background = "var(--green-50)";
+              el.style.borderColor = "rgba(250,247,242,0.7)";
+              el.style.background = "rgba(250,247,242,0.06)";
               el.style.transform = "translateY(-2px)";
             }}
             onMouseLeave={(e) => {
               const el = e.currentTarget as HTMLAnchorElement;
+              el.style.borderColor = "rgba(250,247,242,0.35)";
               el.style.background = "transparent";
               el.style.transform = "translateY(0)";
             }}
@@ -132,12 +170,11 @@ export default function Download() {
           </a>
         </div>
 
-        {/* Fine print */}
         <p
           style={{
             fontFamily: "var(--font-dm-sans), sans-serif",
             fontSize: "13px",
-            color: "var(--text-muted)",
+            color: "rgba(250,247,242,0.3)",
           }}
         >
           Free to download. No credit card required.

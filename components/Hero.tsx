@@ -98,23 +98,23 @@ export default function Hero() {
           className="hero-text"
         >
           {/* Wordmark logo */}
-          <div style={{ marginBottom: "32px", display: "flex", justifyContent: "center", alignItems: "center", gap: "16px" }}>
+          <div style={{ marginBottom: "28px", display: "flex", flexDirection: "column", alignItems: "center", gap: "14px" }}>
             <Image
               src="/assets/Green_Logo_Trans.png"
               alt="The Clubhouse"
-              width={72}
-              height={72}
-              style={{ objectFit: "contain", width: "72px", height: "72px" }}
+              width={96}
+              height={96}
+              style={{ objectFit: "contain", width: "96px", height: "96px" }}
               priority
             />
             <h1
               style={{
                 fontFamily: "var(--font-playfair), Georgia, serif",
-                fontSize: "clamp(28px, 5vw, 48px)",
+                fontSize: "clamp(26px, 4.5vw, 44px)",
                 fontWeight: 800,
                 color: "var(--green-700)",
                 lineHeight: 1.1,
-                letterSpacing: "-0.02em",
+                letterSpacing: "-0.01em",
               }}
             >
               The Clubhouse
@@ -384,7 +384,7 @@ export default function Hero() {
                       { label: "Pine Valley", rating: "10", rank: "1" },
                       { label: "Augusta National", rating: "9.88", rank: "2" },
                       { label: "Pebble Beach", rating: "9.76", rank: "3" },
-                      { label: "Cypress Point", rating: "9.62", rank: "4" },
+                      { label: "Cypress Point", rating: "9.92", rank: "4" },
                     ].map((course) => (
                       <div
                         key={course.label}

@@ -474,7 +474,7 @@ export default function RankingSystem() {
                     marginBottom: "4px",
                   }}
                 >
-                  9.62
+                  9.92
                 </div>
 
                 <div
