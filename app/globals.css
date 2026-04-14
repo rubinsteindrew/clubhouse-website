@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+/* ─────────────────────────────────────────
+   Brand tokens
+   ───────────────────────────────────────── */
+:root {
+  /* Backgrounds */
+  --bg:           #FAF7F2;
+  --surface:      #FFFFFF;
+  --elevated:     #F5F1EB;
+  --border:       rgba(0, 0, 0, 0.08);
+
+  /* Green ramp */
+  --green-900:    #0A1F14;
+  --green-800:    #112619;
+  --green-700:    #163220;
+  --green-600:    #1E4230;
+  --green-500:    #2A5C40;
+  --green-400:    #3D7A56;
+  --green-300:    #5A9E73;
+  --green-200:    #8DC4A1;
+  --green-100:    #C2E0CC;
+  --green-50:     #EBF5EF;
+
+  /* Gold */
+  --gold:         #C9A84C;
+  --gold-light:   #E8C56C;
+  --gold-dim:     rgba(201, 168, 76, 0.15);
+
+  /* Text */
+  --text-primary:   #1A1A1A;
+  --text-secondary: #4A4A4A;
+  --text-muted:     #8A8A8A;
+
+  /* Semantic */
+  --error:   #D94444;
+  --success: #2A5C40;
+}
+
+/* ─────────────────────────────────────────
+   Base reset / typographic defaults
+   ───────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text-primary);
+  line-height: 1.6;
+}
+
+/* ─────────────────────────────────────────
+   Scroll snap carousel
+   ───────────────────────────────────────── */
+.snap-scroll-x {
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+.snap-scroll-x > * {
+  scroll-snap-align: start;
+  flex-shrink: 0;
+}
+
+/* ─────────────────────────────────────────
+   Hide scrollbar but keep scrolling
+   ───────────────────────────────────────── */
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
