@@ -139,10 +139,15 @@ export default function Footer() {
               >
                 Company
               </div>
-              {["About", "Privacy", "Terms", "Contact"].map((link) => (
+              {[
+                { label: "About", href: "/about" },
+                { label: "Privacy", href: "/privacy" },
+                { label: "Terms", href: "/terms" },
+                { label: "Contact", href: "mailto:support@yourclubhouse.net?subject=Hello%20from%20The%20Clubhouse" },
+              ].map((link) => (
                 <a
-                  key={link}
-                  href="#"
+                  key={link.label}
+                  href={link.href}
                   style={{
                     display: "block",
                     fontFamily: "var(--font-dm-sans), sans-serif",
@@ -160,7 +165,7 @@ export default function Footer() {
                       "rgba(250,247,242,0.55)")
                   }
                 >
-                  {link}
+                  {link.label}
                 </a>
               ))}
             </div>

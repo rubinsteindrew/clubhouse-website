@@ -48,12 +48,27 @@ html {
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* Prevent any horizontal overflow from leaking (carousel, absolute positioned decor) */
+  overflow-x: hidden;
 }
 
 body {
   background-color: var(--bg);
   color: var(--text-primary);
   line-height: 1.6;
+  overflow-x: hidden;
+  /* Disable iOS/Android overscroll rubber-banding that can cause jitter */
+  overscroll-behavior-y: none;
+}
+
+/* Respect reduced-motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
 
 /* ─────────────────────────────────────────

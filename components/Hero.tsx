@@ -9,15 +9,29 @@ export default function Hero() {
   useEffect(() => {
     const el = heroRef.current;
     if (!el) return;
+
+    // Disable parallax on small viewports and reduced-motion — causes mobile jitter
+    const mobileMq = window.matchMedia("(max-width: 900px)");
+    const reducedMq = window.matchMedia("(prefers-reduced-motion: reduce)");
+    if (mobileMq.matches || reducedMq.matches) return;
+
+    let rafId: number | null = null;
     const onScroll = () => {
-      const scrolled = window.scrollY;
-      const phone = el.querySelector(".hero-phone") as HTMLElement;
-      if (phone) {
-        phone.style.transform = `translateY(${scrolled * 0.12}px) rotate(-4deg)`;
-      }
+      if (rafId !== null) return;
+      rafId = requestAnimationFrame(() => {
+        const scrolled = window.scrollY;
+        const phone = el.querySelector(".hero-phone") as HTMLElement;
+        if (phone) {
+          phone.style.transform = `translate3d(0, ${scrolled * 0.12}px, 0) rotate(-4deg)`;
+        }
+        rafId = null;
+      });
     };
     window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      if (rafId !== null) cancelAnimationFrame(rafId);
+    };
   }, []);
 
   return (
