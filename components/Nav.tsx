@@ -68,15 +68,17 @@ export default function Nav() {
           style={{
             display: "flex",
             alignItems: "center",
-            gap: "32px",
+            gap: "26px",
           }}
           className="hidden-mobile"
         >
           {[
-            { label: "Features", href: "/#features" },
             { label: "How It Works", href: "/#how-it-works" },
+            { label: "Features", href: "/#features" },
+            { label: "The App", href: "/#the-app" },
             { label: "Top 100", href: "/#top-100" },
             { label: "FAQ", href: "/#faq" },
+            { label: "About", href: "/about" },
           ].map((item) => (
             <a
               key={item.label}
@@ -156,10 +158,12 @@ export default function Nav() {
           }}
         >
           {[
-            { label: "Features", href: "/#features" },
             { label: "How It Works", href: "/#how-it-works" },
+            { label: "Features", href: "/#features" },
+            { label: "The App", href: "/#the-app" },
             { label: "Top 100", href: "/#top-100" },
             { label: "FAQ", href: "/#faq" },
+            { label: "About", href: "/about" },
           ].map((item) => (
             <a
               key={item.label}

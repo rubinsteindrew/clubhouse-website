@@ -129,6 +129,7 @@ const PlaceholderScreen = ({ label, desc }: { label: string; desc: string }) => 
 export default function Screenshots() {
   return (
     <section
+      id="the-app"
       style={{
         background: "var(--elevated)",
         padding: "100px 0",
