@@ -34,24 +34,13 @@ export default function Footer() {
           {/* Brand */}
           <div style={{ maxWidth: "280px" }}>
             <div style={{ marginBottom: "16px", display: "flex", alignItems: "center", gap: "12px" }}>
-              <div
-                style={{
-                  width: "40px",
-                  height: "40px",
-                  borderRadius: "50%",
-                  overflow: "hidden",
-                  flexShrink: 0,
-                  border: "1px solid rgba(250,247,242,0.08)",
-                }}
-              >
-                <Image
-                  src="/assets/golf_emblem_black.png"
-                  alt="The Clubhouse"
-                  width={40}
-                  height={40}
-                  style={{ objectFit: "cover", width: "40px", height: "40px" }}
-                />
-              </div>
+              <Image
+                src="/assets/Cream_Logo_Trans.png"
+                alt="The Clubhouse"
+                width={44}
+                height={44}
+                style={{ objectFit: "contain", width: "44px", height: "44px", flexShrink: 0 }}
+              />
               <span
                 style={{
                   fontFamily: "var(--font-playfair), serif",

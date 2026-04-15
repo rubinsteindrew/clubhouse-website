@@ -1,7 +1,5 @@
 "use client";
 
-import Image from "next/image";
-
 export default function Download() {
   return (
     <section
@@ -10,57 +8,9 @@ export default function Download() {
         background: "var(--green-900)",
         padding: "100px 24px",
         textAlign: "center",
-        position: "relative",
-        overflow: "hidden",
       }}
     >
-      {/* Subtle dot texture */}
-      <div
-        aria-hidden
-        style={{
-          position: "absolute",
-          inset: 0,
-          backgroundImage: `radial-gradient(circle, rgba(250,247,242,0.03) 1px, transparent 1px)`,
-          backgroundSize: "24px 24px",
-          pointerEvents: "none",
-        }}
-      />
-
-      <div style={{ maxWidth: "600px", margin: "0 auto", position: "relative", zIndex: 1 }}>
-
-        {/* Glowing logo medallion */}
-        <div
-          style={{
-            marginBottom: "36px",
-            display: "flex",
-            justifyContent: "center",
-          }}
-        >
-          <div
-            style={{
-              width: "160px",
-              height: "160px",
-              borderRadius: "50%",
-              overflow: "hidden",
-              boxShadow: "0 0 60px rgba(250,247,242,0.12), 0 0 120px rgba(42,92,64,0.4)",
-              flexShrink: 0,
-            }}
-          >
-            <Image
-              src="/assets/golf_logo_C.png"
-              alt="The Clubhouse"
-              width={160}
-              height={160}
-              style={{
-                objectFit: "cover",
-                width: "160px",
-                height: "160px",
-                mixBlendMode: "screen",
-              }}
-            />
-          </div>
-        </div>
-
+      <div style={{ maxWidth: "600px", margin: "0 auto" }}>
         <h2
           style={{
             fontFamily: "var(--font-playfair), Georgia, serif",
