@@ -186,7 +186,7 @@ export default function Hero() {
             Log every round. Rank every course. Share the rounds that mattered.
           </p>
 
-          {/* CTAs */}
+          {/* CTAs — disabled / coming soon */}
           <div
             style={{
               display: "flex",
@@ -195,72 +195,103 @@ export default function Hero() {
               flexWrap: "wrap",
             }}
           >
-            <a
-              href="#download"
-              style={{
-                display: "inline-flex",
-                alignItems: "center",
-                gap: "10px",
-                fontFamily: "var(--font-dm-sans), sans-serif",
-                fontSize: "16px",
-                fontWeight: 600,
-                color: "var(--bg)",
-                background: "var(--green-600)",
-                padding: "14px 28px",
-                borderRadius: "10px",
-                textDecoration: "none",
-                transition: "background 0.2s, transform 0.15s",
-                boxShadow: "0 2px 8px rgba(42,92,64,0.25)",
-              }}
-              onMouseEnter={(e) => {
-                const el = e.currentTarget as HTMLAnchorElement;
-                el.style.background = "var(--green-700)";
-                el.style.transform = "translateY(-1px)";
-              }}
-              onMouseLeave={(e) => {
-                const el = e.currentTarget as HTMLAnchorElement;
-                el.style.background = "var(--green-600)";
-                el.style.transform = "translateY(0)";
-              }}
-            >
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
-              </svg>
-              Download for iOS
-            </a>
-            <a
-              href="#download"
-              style={{
-                display: "inline-flex",
-                alignItems: "center",
-                gap: "10px",
-                fontFamily: "var(--font-dm-sans), sans-serif",
-                fontSize: "16px",
-                fontWeight: 600,
-                color: "var(--green-600)",
-                background: "transparent",
-                padding: "13px 28px",
-                borderRadius: "10px",
-                textDecoration: "none",
-                border: "2px solid var(--green-600)",
-                transition: "background 0.2s, color 0.2s, transform 0.15s",
-              }}
-              onMouseEnter={(e) => {
-                const el = e.currentTarget as HTMLAnchorElement;
-                el.style.background = "var(--green-50)";
-                el.style.transform = "translateY(-1px)";
-              }}
-              onMouseLeave={(e) => {
-                const el = e.currentTarget as HTMLAnchorElement;
-                el.style.background = "transparent";
-                el.style.transform = "translateY(0)";
-              }}
-            >
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M22.018 13.298l-3.919 2.218-3.515-3.493 3.543-3.521 3.891 2.202a1.49 1.49 0 0 1 0 2.594zM1.337.924a1.486 1.486 0 0 0-.112.568v21.017c0 .217.045.419.124.6l11.155-11.087L1.337.924zm12.207 10.065l3.258-3.238L3.45.195a1.466 1.466 0 0 0-.946-.179l11.04 10.973zm0 2.067l-11 10.933c.298.064.612.019.898-.162L16.766 16.3l-3.222-3.244z"/>
-              </svg>
-              Get on Android
-            </a>
+            {/* iOS — disabled */}
+            <div style={{ position: "relative", display: "inline-flex" }}>
+              <button
+                type="button"
+                disabled
+                aria-disabled="true"
+                style={{
+                  display: "inline-flex",
+                  alignItems: "center",
+                  gap: "10px",
+                  fontFamily: "var(--font-dm-sans), sans-serif",
+                  fontSize: "16px",
+                  fontWeight: 600,
+                  color: "rgba(255,255,255,0.85)",
+                  background: "var(--text-muted)",
+                  padding: "14px 28px",
+                  borderRadius: "10px",
+                  border: "none",
+                  cursor: "not-allowed",
+                }}
+              >
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+                </svg>
+                Download for iOS
+              </button>
+              <span
+                style={{
+                  position: "absolute",
+                  top: "-10px",
+                  right: "-8px",
+                  padding: "3px 10px",
+                  borderRadius: "100px",
+                  background: "var(--gold)",
+                  color: "var(--green-900)",
+                  fontFamily: "var(--font-dm-sans), sans-serif",
+                  fontSize: "10px",
+                  fontWeight: 700,
+                  letterSpacing: "0.08em",
+                  textTransform: "uppercase",
+                  whiteSpace: "nowrap",
+                  boxShadow: "0 2px 6px rgba(0,0,0,0.18)",
+                  pointerEvents: "none",
+                }}
+              >
+                Coming Soon
+              </span>
+            </div>
+
+            {/* Android — disabled */}
+            <div style={{ position: "relative", display: "inline-flex" }}>
+              <button
+                type="button"
+                disabled
+                aria-disabled="true"
+                style={{
+                  display: "inline-flex",
+                  alignItems: "center",
+                  gap: "10px",
+                  fontFamily: "var(--font-dm-sans), sans-serif",
+                  fontSize: "16px",
+                  fontWeight: 600,
+                  color: "var(--text-muted)",
+                  background: "transparent",
+                  padding: "13px 28px",
+                  borderRadius: "10px",
+                  border: "2px solid var(--text-muted)",
+                  cursor: "not-allowed",
+                }}
+              >
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M22.018 13.298l-3.919 2.218-3.515-3.493 3.543-3.521 3.891 2.202a1.49 1.49 0 0 1 0 2.594zM1.337.924a1.486 1.486 0 0 0-.112.568v21.017c0 .217.045.419.124.6l11.155-11.087L1.337.924zm12.207 10.065l3.258-3.238L3.45.195a1.466 1.466 0 0 0-.946-.179l11.04 10.973zm0 2.067l-11 10.933c.298.064.612.019.898-.162L16.766 16.3l-3.222-3.244z"/>
+                </svg>
+                Get on Android
+              </button>
+              <span
+                style={{
+                  position: "absolute",
+                  top: "-10px",
+                  right: "-8px",
+                  padding: "3px 10px",
+                  borderRadius: "100px",
+                  background: "var(--gold)",
+                  color: "var(--green-900)",
+                  fontFamily: "var(--font-dm-sans), sans-serif",
+                  fontSize: "10px",
+                  fontWeight: 700,
+                  letterSpacing: "0.08em",
+                  textTransform: "uppercase",
+                  whiteSpace: "nowrap",
+                  boxShadow: "0 2px 6px rgba(0,0,0,0.18)",
+                  pointerEvents: "none",
+                }}
+              >
+                Coming Soon
+              </span>
+            </div>
           </div>
 
           {/* Social proof badge */}
@@ -455,47 +486,7 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Scroll hint */}
-      <div
-        style={{
-          position: "absolute",
-          bottom: "32px",
-          left: "50%",
-          transform: "translateX(-50%)",
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          gap: "6px",
-          opacity: 0.45,
-        }}
-      >
-        <span
-          style={{
-            fontFamily: "var(--font-dm-sans), sans-serif",
-            fontSize: "11px",
-            fontWeight: 500,
-            color: "var(--text-muted)",
-            textTransform: "uppercase",
-            letterSpacing: "0.1em",
-          }}
-        >
-          Scroll
-        </span>
-        <div
-          style={{
-            width: "1px",
-            height: "32px",
-            background: "var(--text-muted)",
-            animation: "pulse 2s ease-in-out infinite",
-          }}
-        />
-      </div>
-
       <style>{`
-        @keyframes pulse {
-          0%, 100% { opacity: 1; }
-          50% { opacity: 0.3; }
-        }
         @media (min-width: 900px) {
           .hero-grid {
             grid-template-columns: 1fr 1fr !important;

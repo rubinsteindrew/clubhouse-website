@@ -48,15 +48,16 @@ html {
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* Prevent any horizontal overflow from leaking (carousel, absolute positioned decor) */
-  overflow-x: hidden;
+  /* Use overflow-x: clip instead of hidden — doesn't create a scroll container,
+     so vertical scrolling still works when combined with h-full on html */
+  overflow-x: clip;
 }
 
 body {
   background-color: var(--bg);
   color: var(--text-primary);
   line-height: 1.6;
-  overflow-x: hidden;
+  overflow-x: clip;
   /* Disable iOS/Android overscroll rubber-banding that can cause jitter */
   overscroll-behavior-y: none;
 }
