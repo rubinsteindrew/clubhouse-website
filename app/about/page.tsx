@@ -25,7 +25,27 @@ export default function About() {
         the classics. There wasn&apos;t a place where your golf life lived.
       </p>
 
-      <p>So we built one.</p>
+      <h2>How it started</h2>
+
+      <p>
+        My dad and I are obsessed with golf. For years we each kept our own top 10 — top
+        25 lists of every course we&apos;d played, scribbled into the Notes app on our
+        phones. We&apos;d reorder them after every trip, argue about them on drives
+        home, text each other screenshots, lose them, rebuild them.
+      </p>
+
+      <p>
+        It worked, sort of. But a plain text list doesn&apos;t do a favorite course any
+        justice. There were no photos, no rankings we could actually compare side by
+        side, no way to share them with friends without copy-pasting, no record of
+        who we played with, no way to track progress toward the Top 100s we both
+        cared about. The lists lived in our heads more than our phones.
+      </p>
+
+      <p>
+        I wanted a better way to visualize and share what we&apos;d each already
+        built — a real home for the list, not another Notes file. So I built one.
+      </p>
 
       <h2>What it is</h2>
 
@@ -49,8 +69,8 @@ export default function About() {
 
       <p>
         The Clubhouse is built by golfers, for golfers. We play the game, we chase
-        the lists, and we argue about the courses. If we wouldn&apos;t use a feature,
-        it doesn&apos;t go in the app.
+        the lists, and we argue about the courses. If we wouldn&apos;t use a feature
+        ourselves, it doesn&apos;t go in the app.
       </p>
 
       <h2>Get in touch</h2>
