@@ -338,9 +338,11 @@ export default function Hero() {
                 }}
               >
                 <Image
-                  src="/assets/screenshots/feed_main.png"
+                  src="/assets/screenshots/Feed.jpg"
                   alt="The Clubhouse app feed"
                   fill
+                  sizes="280px"
+                  unoptimized
                   style={{ objectFit: "cover" }}
                   onError={(e) => {
                     const t = e.currentTarget as HTMLImageElement;

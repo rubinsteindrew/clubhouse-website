@@ -50,10 +50,6 @@ export const metadata: Metadata = {
       "Log every round. Rank every course. Share the rounds that mattered.",
     images: ["/og-image.png"],
   },
-  icons: {
-    icon: "/assets/favicon.png",
-    apple: "/assets/favicon.png",
-  },
 };
 
 export default function RootLayout({

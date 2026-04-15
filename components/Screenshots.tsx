@@ -1,58 +1,66 @@
 "use client";
 
-import Image from "next/image";
 
 const slides = [
   {
-    src: "/assets/screenshots/feed_main.png",
+    src: "/assets/screenshots/Feed.jpg",
     label: "Friends Feed",
     desc: "See every round your friends play",
   },
   {
-    src: "/assets/screenshots/rank_comparison.png",
-    label: "Rank Comparison",
-    desc: "Head-to-head comparisons",
+    src: "/assets/screenshots/Rank_A_New_Course.jpg",
+    label: "Log a Round",
+    desc: "Add every course you play",
   },
   {
-    src: "/assets/screenshots/my_list.png",
-    label: "My List",
+    src: "/assets/screenshots/Course_Picker.jpg",
+    label: "Head-to-Head",
+    desc: "Which do you prefer?",
+  },
+  {
+    src: "/assets/screenshots/My_Profile_Top_10.jpg",
+    label: "Top 10 List",
     desc: "Your personal ranked list",
   },
   {
-    src: "/assets/screenshots/course_detail.png",
-    label: "Course Detail",
-    desc: "Deep dive on any course",
+    src: "/assets/screenshots/Friends_Post.jpg",
+    label: "Friends Posts",
+    desc: "See what your friends are playing",
   },
   {
-    src: "/assets/screenshots/map_view.png",
-    label: "Map View",
+    src: "/assets/screenshots/MyMap.jpg",
+    label: "My Map",
     desc: "Every course you've played, pinned",
   },
   {
-    src: "/assets/screenshots/discover.png",
+    src: "/assets/screenshots/Discover_Courses.jpg",
     label: "Discover",
-    desc: "Community Clubhouse Top 100",
+    desc: "The live Clubhouse Top 100",
   },
   {
-    src: "/assets/screenshots/messages.png",
+    src: "/assets/screenshots/Messages.jpg",
     label: "Messages",
     desc: "DMs and group chats",
   },
   {
-    src: "/assets/screenshots/profile.png",
+    src: "/assets/screenshots/My_Profile.jpg",
     label: "Profile",
-    desc: "Your stats and rankings",
+    desc: "Your stats and photos",
   },
 ];
 
 // Duplicate for seamless infinite loop
 const LOOP_SLIDES = [...slides, ...slides];
 
-// Card geometry — keep in sync with the inline styles below
-const CARD_W = 220;
+// Card geometry — integer dimensions for pixel-perfect rendering
+// Screen area: 240w × 520h (exact 9:19.5 ratio, no fractional pixels)
+// Phone shell padding 8px → outer card width = 240 + 16 = 256
+const SCREEN_W = 240;
+const SCREEN_H = 520;
+const CARD_W = SCREEN_W + 16; // +16 for 8px padding on each side
 const GAP = 24;
 // Translate exactly one full set to the left to create the seamless loop
-const ONE_SET_PX = slides.length * (CARD_W + GAP); // 8 × 244 = 1952
+const ONE_SET_PX = slides.length * (CARD_W + GAP); // 9 × 280 = 2520
 
 const PlaceholderScreen = ({ label, desc }: { label: string; desc: string }) => (
   <div
@@ -171,7 +179,7 @@ export default function Screenshots() {
       </div>
 
       {/* ── Infinite marquee track ── */}
-      <div style={{ overflow: "hidden", paddingBottom: "24px" }}>
+      <div style={{ overflow: "hidden", paddingTop: "16px", paddingBottom: "32px" }}>
         <div
           style={{
             display: "flex",
@@ -179,6 +187,10 @@ export default function Screenshots() {
             width: "max-content",
             paddingLeft: `${GAP}px`,
             animation: `carousel ${slides.length * 4}s linear infinite`,
+            willChange: "transform",
+            backfaceVisibility: "hidden",
+            WebkitBackfaceVisibility: "hidden",
+            transformStyle: "preserve-3d",
           }}
           onMouseEnter={(e) =>
             ((e.currentTarget as HTMLDivElement).style.animationPlayState = "paused")
@@ -224,20 +236,39 @@ export default function Screenshots() {
                     background: "var(--surface)",
                     borderRadius: "25px",
                     overflow: "hidden",
-                    aspectRatio: "9/19.5",
+                    width: `${SCREEN_W}px`,
+                    height: `${SCREEN_H}px`,
                     position: "relative",
+                    transform: "translateZ(0)",
+                    backfaceVisibility: "hidden",
+                    WebkitBackfaceVisibility: "hidden",
                   }}
                 >
-                  <Image
+                  {/* Placeholder renders first so the real screenshot sits on top */}
+                  <PlaceholderScreen label={slide.label} desc={slide.desc} />
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
                     src={slide.src}
                     alt={slide.label}
-                    fill
-                    style={{ objectFit: "cover" }}
+                    width={SCREEN_W}
+                    height={SCREEN_H}
+                    decoding="async"
+                    style={{
+                      position: "absolute",
+                      top: 0,
+                      left: 0,
+                      width: `${SCREEN_W}px`,
+                      height: `${SCREEN_H}px`,
+                      objectFit: "cover",
+                      zIndex: 1,
+                      imageRendering: "-webkit-optimize-contrast",
+                      transform: "translateZ(0)",
+                      backfaceVisibility: "hidden",
+                    }}
                     onError={(e) => {
                       (e.currentTarget as HTMLImageElement).style.display = "none";
                     }}
                   />
-                  <PlaceholderScreen label={slide.label} desc={slide.desc} />
                 </div>
               </div>
 
