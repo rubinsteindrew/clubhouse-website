@@ -196,7 +196,9 @@ export default function Footer() {
           <div style={{ display: "flex", gap: "16px" }}>
             {/* Instagram */}
             <a
-              href="#"
+              href="https://www.instagram.com/theclubhousegolfapp/"
+              target="_blank"
+              rel="noopener noreferrer"
               aria-label="Instagram"
               style={{
                 width: "36px",
@@ -229,7 +231,9 @@ export default function Footer() {
             </a>
             {/* X / Twitter */}
             <a
-              href="#"
+              href="https://x.com/AppTheClubhouse"
+              target="_blank"
+              rel="noopener noreferrer"
               aria-label="X (Twitter)"
               style={{
                 width: "36px",
