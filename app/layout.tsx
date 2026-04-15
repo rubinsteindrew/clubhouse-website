@@ -60,10 +60,10 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${playfair.variable} ${dmSans.variable} h-full`}
+      className={`${playfair.variable} ${dmSans.variable}`}
       style={{ fontFamily: "var(--font-dm-sans), ui-sans-serif, system-ui, sans-serif" }}
     >
-      <body className="min-h-full flex flex-col antialiased">{children}</body>
+      <body className="flex flex-col antialiased">{children}</body>
     </html>
   );
 }

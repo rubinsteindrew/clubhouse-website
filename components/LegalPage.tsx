@@ -31,6 +31,39 @@ export default function LegalPage({ eyebrow, title, updated, children }: Props) 
             margin: "0 auto",
           }}
         >
+          {/* Back to home link */}
+          <a
+            href="/"
+            style={{
+              display: "inline-flex",
+              alignItems: "center",
+              gap: "6px",
+              fontFamily: "var(--font-dm-sans), sans-serif",
+              fontSize: "14px",
+              fontWeight: 500,
+              color: "var(--green-500)",
+              textDecoration: "none",
+              marginBottom: "32px",
+              transition: "color 0.2s, transform 0.2s",
+            }}
+            onMouseEnter={(e) => {
+              const el = e.currentTarget as HTMLAnchorElement;
+              el.style.color = "var(--green-700)";
+              el.style.transform = "translateX(-2px)";
+            }}
+            onMouseLeave={(e) => {
+              const el = e.currentTarget as HTMLAnchorElement;
+              el.style.color = "var(--green-500)";
+              el.style.transform = "translateX(0)";
+            }}
+          >
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+              <line x1="19" y1="12" x2="5" y2="12"/>
+              <polyline points="12 19 5 12 12 5"/>
+            </svg>
+            Back to home
+          </a>
+
           <p
             style={{
               fontFamily: "var(--font-dm-sans), sans-serif",

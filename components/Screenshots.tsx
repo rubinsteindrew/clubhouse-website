@@ -178,19 +178,20 @@ export default function Screenshots() {
         </p>
       </div>
 
-      {/* ── Infinite marquee track ── */}
-      <div style={{ overflow: "hidden", paddingTop: "16px", paddingBottom: "32px" }}>
+      {/* ── Infinite marquee track ──
+          Use explicit pixel width (not max-content) and overflow: hidden
+          for compat with older iOS/Android browsers. */}
+      <div style={{ overflow: "hidden", paddingTop: "16px", paddingBottom: "32px", paddingLeft: `${GAP}px` }}>
         <div
           style={{
             display: "flex",
             gap: `${GAP}px`,
-            width: "max-content",
-            paddingLeft: `${GAP}px`,
+            width: `${LOOP_SLIDES.length * CARD_W + (LOOP_SLIDES.length - 1) * GAP}px`,
             animation: `carousel ${slides.length * 4}s linear infinite`,
+            WebkitAnimation: `carousel ${slides.length * 4}s linear infinite`,
             willChange: "transform",
             backfaceVisibility: "hidden",
             WebkitBackfaceVisibility: "hidden",
-            transformStyle: "preserve-3d",
           }}
           onMouseEnter={(e) =>
             ((e.currentTarget as HTMLDivElement).style.animationPlayState = "paused")
@@ -300,9 +301,13 @@ export default function Screenshots() {
       </div>
 
       <style>{`
+        @-webkit-keyframes carousel {
+          0%   { -webkit-transform: translateX(0); transform: translateX(0); }
+          100% { -webkit-transform: translateX(-${ONE_SET_PX}px); transform: translateX(-${ONE_SET_PX}px); }
+        }
         @keyframes carousel {
-          0%   { transform: translateX(0); }
-          100% { transform: translateX(-${ONE_SET_PX}px); }
+          0%   { -webkit-transform: translateX(0); transform: translateX(0); }
+          100% { -webkit-transform: translateX(-${ONE_SET_PX}px); transform: translateX(-${ONE_SET_PX}px); }
         }
       `}</style>
     </section>

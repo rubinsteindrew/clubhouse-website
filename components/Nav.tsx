@@ -73,10 +73,10 @@ export default function Nav() {
           className="hidden-mobile"
         >
           {[
-            { label: "Features", href: "#features" },
-            { label: "How It Works", href: "#how-it-works" },
-            { label: "Top 100", href: "#top-100" },
-            { label: "FAQ", href: "#faq" },
+            { label: "Features", href: "/#features" },
+            { label: "How It Works", href: "/#how-it-works" },
+            { label: "Top 100", href: "/#top-100" },
+            { label: "FAQ", href: "/#faq" },
           ].map((item) => (
             <a
               key={item.label}
@@ -103,7 +103,7 @@ export default function Nav() {
           ))}
 
           <a
-            href="#download"
+            href="/#download"
             style={{
               fontFamily: "var(--font-dm-sans), sans-serif",
               fontSize: "15px",
@@ -156,10 +156,10 @@ export default function Nav() {
           }}
         >
           {[
-            { label: "Features", href: "#features" },
-            { label: "How It Works", href: "#how-it-works" },
-            { label: "Top 100", href: "#top-100" },
-            { label: "FAQ", href: "#faq" },
+            { label: "Features", href: "/#features" },
+            { label: "How It Works", href: "/#how-it-works" },
+            { label: "Top 100", href: "/#top-100" },
+            { label: "FAQ", href: "/#faq" },
           ].map((item) => (
             <a
               key={item.label}
@@ -180,7 +180,7 @@ export default function Nav() {
             </a>
           ))}
           <a
-            href="#download"
+            href="/#download"
             onClick={() => setMenuOpen(false)}
             style={{
               display: "block",

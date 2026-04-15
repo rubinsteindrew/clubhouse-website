@@ -245,12 +245,18 @@ export default function RankingSystem() {
               boxShadow: "0 24px 64px rgba(0,0,0,0.4)",
             }}
           >
-            {/* Fade wrapper — opacity + slight lift on enter/exit */}
+            {/* Fade wrapper — opacity + slight lift on enter/exit
+                Fixed min-height prevents mobile scroll jitter when switching
+                between asking/answered/done card states */}
             <div
               style={{
+                minHeight: "316px",
                 opacity: visible ? 1 : 0,
                 transform: visible ? "translateY(0)" : "translateY(6px)",
                 transition: "opacity 0.35s ease, transform 0.35s ease",
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "center",
               }}
             >
             {!done ? (
