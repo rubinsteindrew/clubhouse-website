@@ -48,21 +48,12 @@ html {
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* Use overflow-x: hidden (supported everywhere). Height is left alone
-     so html doesn't become a fixed-height scroll container. */
-  overflow-x: hidden;
-  width: 100%;
 }
 
 body {
   background-color: var(--bg);
   color: var(--text-primary);
   line-height: 1.6;
-  overflow-x: hidden;
-  width: 100%;
-  position: relative;
-  /* Disable iOS/Android overscroll rubber-banding that can cause jitter */
-  overscroll-behavior-y: none;
 }
 
 /* Respect reduced-motion preference */
