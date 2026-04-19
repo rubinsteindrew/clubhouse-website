@@ -7,16 +7,8 @@ export default function SplashScreen({ children }: { children: React.ReactNode }
   const [phase, setPhase] = useState<"splash" | "fading" | "done">("splash");
 
   useEffect(() => {
-    if (sessionStorage.getItem("splash-shown")) {
-      setPhase("done");
-      return;
-    }
-
-    const hold = setTimeout(() => {
-      setPhase("fading");
-      sessionStorage.setItem("splash-shown", "1");
-    }, 2200);
-
+    // Show splash on every fresh page load of the homepage
+    const hold = setTimeout(() => setPhase("fading"), 2200);
     return () => clearTimeout(hold);
   }, []);
 
