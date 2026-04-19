@@ -9,10 +9,11 @@ import TopHundred from "@/components/TopHundred";
 import FAQ from "@/components/FAQ";
 import Download from "@/components/Download";
 import Footer from "@/components/Footer";
+import SplashScreen from "@/components/SplashScreen";
 
 export default function Home() {
   return (
-    <>
+    <SplashScreen>
       <Nav />
       <main>
         <Hero />
@@ -26,6 +27,6 @@ export default function Home() {
         <Download />
       </main>
       <Footer />
-    </>
+    </SplashScreen>
   );
 }
