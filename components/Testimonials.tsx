@@ -7,7 +7,7 @@ const testimonials = [
     avatar: "/assets/avatars/avatar_1.png",
     quote:
       "I had a running list in my Notes app for years. This replaced it in one afternoon. Being able to compare courses head-to-head instead of guessing a number out of thin air is a game changer.",
-    course: "Bandon Dunes, OR",
+    since: "Member since 2026",
   },
   {
     name: "Sarah Chen",
@@ -15,7 +15,7 @@ const testimonials = [
     avatar: "/assets/avatars/avatar_2.png",
     quote:
       "My husband and I use it to track every course from our golf trips. The map view alone is worth it — seeing all our pins across the country is incredibly satisfying.",
-    course: "Whistling Straits, WI",
+    since: "Member since 2026",
   },
   {
     name: "Ryan Donnelly",
@@ -23,7 +23,7 @@ const testimonials = [
     avatar: "/assets/avatars/avatar_3.png",
     quote:
       "I'm chasing the Golf Digest Top 100 and finally have a real way to track my progress. The fact that I can see my friends' lists too makes it competitive in the best way.",
-    course: "Pebble Beach, CA",
+    since: "Member since 2026",
   },
   {
     name: "Kevin Park",
@@ -31,7 +31,7 @@ const testimonials = [
     avatar: "/assets/avatars/avatar_4.png",
     quote:
       "Our Saturday foursome has a group chat in the app now. We share every round and argue about rankings all week. It's become part of the routine.",
-    course: "TPC Sawgrass, FL",
+    since: "Member since 2026",
   },
   {
     name: "Tom Whitfield",
@@ -39,7 +39,7 @@ const testimonials = [
     avatar: "/assets/avatars/avatar_5.png",
     quote:
       "Clean, fast, no bloat. It does one thing — rank courses — and it does it perfectly. The comparison system is so intuitive. My whole club is on it.",
-    course: "Pinehurst No. 2, NC",
+    since: "Member since 2026",
   },
 ];
 
@@ -212,7 +212,7 @@ export default function Testimonials() {
                   </div>
                 </div>
 
-                {/* Course pill */}
+                {/* Member since pill */}
                 <div
                   style={{
                     marginLeft: "auto",
@@ -228,7 +228,7 @@ export default function Testimonials() {
                     flexShrink: 0,
                   }}
                 >
-                  {t.course}
+                  {t.since}
                 </div>
               </div>
             </div>
