@@ -17,6 +17,7 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.yourclubhouse.net"),
   title: "The Clubhouse — Your Courses. Ranked.",
   description:
     "The Clubhouse is a social app for golfers to log every round, rank every course, and share with friends. Binary-comparison rankings, two Top 100 lists, social feed, and messaging.",

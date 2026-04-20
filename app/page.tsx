@@ -10,6 +10,7 @@ import FAQ from "@/components/FAQ";
 import Download from "@/components/Download";
 import Footer from "@/components/Footer";
 import SplashScreen from "@/components/SplashScreen";
+import Testimonials from "@/components/Testimonials";
 
 export default function Home() {
   return (
@@ -23,6 +24,7 @@ export default function Home() {
         <Screenshots />
         <Personas />
         <TopHundred />
+        <Testimonials />
         <FAQ />
         <Download />
       </main>
