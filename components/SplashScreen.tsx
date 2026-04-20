@@ -103,9 +103,10 @@ export default function SplashScreen({ children }: { children: React.ReactNode }
               <Image
                 src="/assets/Cream_Logo_Trans.png"
                 alt="The Clubhouse"
-                width={160}
-                height={160}
+                width={320}
+                height={320}
                 priority
+                unoptimized
                 style={{
                   objectFit: "contain",
                   width: "160px",
