@@ -338,7 +338,7 @@ export default function Hero() {
                 color: "var(--text-secondary)",
               }}
             >
-              Golfers ranking their courses
+              1,800+ courses rated in 2026
             </span>
           </div>
         </div>
