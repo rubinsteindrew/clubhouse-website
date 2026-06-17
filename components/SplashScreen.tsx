@@ -8,7 +8,7 @@ export default function SplashScreen({ children }: { children: React.ReactNode }
 
   useEffect(() => {
     // Show splash on every fresh page load of the homepage
-    const hold = setTimeout(() => setPhase("fading"), 2200);
+    const hold = setTimeout(() => setPhase("fading"), 2600);
     return () => clearTimeout(hold);
   }, []);
 
@@ -83,37 +83,80 @@ export default function SplashScreen({ children }: { children: React.ReactNode }
               zIndex: 1,
             }}
           >
-            {/* Logo — large with glow */}
+            {/* Logo — pieces assemble (ring from left, green from bottom),
+                then the ball flies in from the right and bounces onto the green */}
             <div
               style={{
-                animation: "splash-logo 0.8s cubic-bezier(0.34,1.56,0.64,1) both",
                 position: "relative",
+                width: "160px",
+                height: "160px",
               }}
             >
-              {/* Glow behind logo */}
+              {/* Glow behind logo — fades in once the pieces have landed */}
               <div
                 style={{
                   position: "absolute",
                   inset: "-40px",
                   borderRadius: "50%",
                   background: "radial-gradient(circle, rgba(201,168,76,0.15) 0%, transparent 70%)",
-                  animation: "splash-glow 2s ease-in-out 0.6s both",
+                  animation: "splash-glow 1.4s ease-in-out 1.15s both",
                 }}
               />
+
+              {/* C-ring — slides in from the left */}
               <Image
-                src="/assets/Cream_Logo_Trans.png"
+                src="/assets/logo_main.png"
+                alt=""
+                width={320}
+                height={320}
+                priority
+                unoptimized
+                style={{
+                  position: "absolute",
+                  inset: 0,
+                  width: "100%",
+                  height: "100%",
+                  objectFit: "contain",
+                  filter: "drop-shadow(0 0 24px rgba(201,168,76,0.18))",
+                  animation: "splash-ring-in 0.65s cubic-bezier(0.22,1,0.36,1) 0.05s both",
+                }}
+              />
+
+              {/* Green + flag — rises into place from the bottom */}
+              <Image
+                src="/assets/logo_swoosh.png"
+                alt=""
+                width={320}
+                height={320}
+                priority
+                unoptimized
+                style={{
+                  position: "absolute",
+                  inset: 0,
+                  width: "100%",
+                  height: "100%",
+                  objectFit: "contain",
+                  filter: "drop-shadow(0 0 24px rgba(201,168,76,0.18))",
+                  animation: "splash-green-in 0.7s cubic-bezier(0.22,1,0.36,1) 0.2s both",
+                }}
+              />
+
+              {/* Ball — flies in from the right and bounces onto the green */}
+              <Image
+                src="/assets/logo_ball.png"
                 alt="The Clubhouse"
                 width={320}
                 height={320}
                 priority
                 unoptimized
                 style={{
+                  position: "absolute",
+                  inset: 0,
+                  width: "100%",
+                  height: "100%",
                   objectFit: "contain",
-                  width: "160px",
-                  height: "160px",
-                  position: "relative",
-                  zIndex: 1,
-                  filter: "drop-shadow(0 0 40px rgba(201,168,76,0.2))",
+                  filter: "drop-shadow(0 0 16px rgba(201,168,76,0.25))",
+                  animation: "splash-ball-in 0.95s 0.85s both",
                 }}
               />
             </div>
@@ -169,14 +212,53 @@ export default function SplashScreen({ children }: { children: React.ReactNode }
       )}
 
       <style>{`
-        @keyframes splash-logo {
+        @keyframes splash-ring-in {
           0% {
             opacity: 0;
-            transform: scale(0.6) translateY(10px);
+            transform: translateX(-120px);
           }
           100% {
             opacity: 1;
-            transform: scale(1) translateY(0);
+            transform: translateX(0);
+          }
+        }
+        @keyframes splash-green-in {
+          0% {
+            opacity: 0;
+            transform: translateY(110px);
+          }
+          100% {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+        @keyframes splash-ball-in {
+          0% {
+            opacity: 0;
+            transform: translate(360px, -150px);
+            animation-timing-function: ease-in;
+          }
+          18% {
+            opacity: 1;
+          }
+          46% {
+            transform: translate(0, 14px);
+            animation-timing-function: ease-out;
+          }
+          62% {
+            transform: translate(0, -22px);
+            animation-timing-function: ease-in;
+          }
+          76% {
+            transform: translate(0, 9px);
+            animation-timing-function: ease-out;
+          }
+          88% {
+            transform: translate(0, -5px);
+            animation-timing-function: ease-in;
+          }
+          100% {
+            transform: translate(0, 0);
           }
         }
         @keyframes splash-text {
