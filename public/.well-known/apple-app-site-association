@@ -1,0 +1,11 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "X59835TKBC.net.yourclubhouse.app",
+        "paths": ["/u/*"]
+      }
+    ]
+  }
+}
