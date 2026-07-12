@@ -58,7 +58,7 @@ export default function Explainer() {
             marginBottom: "16px",
           }}
         >
-          What is The Clubhouse
+          What is Your Clubhouse
         </p>
 
         <h2

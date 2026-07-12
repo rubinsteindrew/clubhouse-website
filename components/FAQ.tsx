@@ -9,7 +9,7 @@ const faqs = [
   },
   {
     q: "Do I need a handicap or GHIN account?",
-    a: "No. The Clubhouse is not a handicap app. There is no GHIN integration required. You log courses and rank them — that's it.",
+    a: "No. Your Clubhouse is not a handicap app. There is no GHIN integration required. You log courses and rank them — that's it.",
   },
   {
     q: "Does it work for international courses?",
@@ -29,7 +29,7 @@ const faqs = [
   },
   {
     q: "How is this different from 18Birdies or GolfNow?",
-    a: "Those apps focus on booking tee times and tracking handicaps. The Clubhouse is about your personal ranking and social sharing — not scorecards or booking. Different use case entirely.",
+    a: "Those apps focus on booking tee times and tracking handicaps. Your Clubhouse is about your personal ranking and social sharing — not scorecards or booking. Different use case entirely.",
   },
   {
     q: "How does the ranking system work exactly?",

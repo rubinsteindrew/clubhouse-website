@@ -19,9 +19,9 @@ const dmSans = DM_Sans({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.yourclubhouse.net"),
-  title: "The Clubhouse — Your Courses. Ranked.",
+  title: "Your Clubhouse — Your Courses. Ranked.",
   description:
-    "The Clubhouse is a social app for golfers to log every round, rank every course, and share with friends. Binary-comparison rankings, two Top 100 lists, social feed, and messaging.",
+    "Your Clubhouse is a social app for golfers to log every round, rank every course, and share with friends. Binary-comparison rankings, two Top 100 lists, social feed, and messaging.",
   keywords: [
     "golf app",
     "golf course tracker",
@@ -32,22 +32,22 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     type: "website",
-    title: "The Clubhouse — Your Courses. Ranked.",
+    title: "Your Clubhouse — Your Courses. Ranked.",
     description:
       "Log every round. Rank every course. Share the rounds that mattered.",
-    siteName: "The Clubhouse",
+    siteName: "Your Clubhouse",
     images: [
       {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "The Clubhouse — Your Courses. Ranked.",
+        alt: "Your Clubhouse — Your Courses. Ranked.",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "The Clubhouse — Your Courses. Ranked.",
+    title: "Your Clubhouse — Your Courses. Ranked.",
     description:
       "Log every round. Rank every course. Share the rounds that mattered.",
     images: ["/og-image.png"],

@@ -3,49 +3,39 @@
 
 const slides = [
   {
-    src: "/assets/screenshots/Feed.jpg",
-    label: "Friends Feed",
-    desc: "See every round your friends play",
+    src: "/assets/screenshots/global-feed.jpg",
+    label: "The Feed",
+    desc: "Every round your friends play",
   },
   {
-    src: "/assets/screenshots/Rank_A_New_Course.jpg",
-    label: "Log a Round",
-    desc: "Add every course you play",
+    src: "/assets/screenshots/profile.jpg",
+    label: "Your Profile",
+    desc: "Courses played, ranked, and chased",
   },
   {
-    src: "/assets/screenshots/Course_Picker.jpg",
-    label: "Head-to-Head",
-    desc: "Which do you prefer?",
+    src: "/assets/screenshots/discover-courses.jpg",
+    label: "Discover",
+    desc: "The live Clubhouse 100",
   },
   {
-    src: "/assets/screenshots/My_Profile_Top_10.jpg",
-    label: "Top 10 List",
-    desc: "Your personal ranked list",
-  },
-  {
-    src: "/assets/screenshots/Friends_Post.jpg",
-    label: "Friends Posts",
-    desc: "See what your friends are playing",
-  },
-  {
-    src: "/assets/screenshots/MyMap.jpg",
-    label: "My Map",
+    src: "/assets/screenshots/my-map.jpg",
+    label: "Your Map",
     desc: "Every course you've played, pinned",
   },
   {
-    src: "/assets/screenshots/Discover_Courses.jpg",
-    label: "Discover",
-    desc: "The live Clubhouse Top 100",
+    src: "/assets/screenshots/wishlist.jpg",
+    label: "Wishlist",
+    desc: "The courses you're chasing next",
   },
   {
-    src: "/assets/screenshots/Messages.jpg",
+    src: "/assets/screenshots/discover-friends.jpg",
+    label: "Find Your Foursome",
+    desc: "Follow the golfers you play with",
+  },
+  {
+    src: "/assets/screenshots/messages.jpg",
     label: "Messages",
     desc: "DMs and group chats",
-  },
-  {
-    src: "/assets/screenshots/My_Profile.jpg",
-    label: "Profile",
-    desc: "Your stats and photos",
   },
 ];
 

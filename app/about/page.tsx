@@ -2,16 +2,16 @@ import type { Metadata } from "next";
 import LegalPage from "@/components/LegalPage";
 
 export const metadata: Metadata = {
-  title: "About — The Clubhouse",
+  title: "About — Your Clubhouse",
   description:
-    "The Clubhouse is a social app for golfers to log, rank, and share every course they've played.",
+    "Your Clubhouse is a social app for golfers to log, rank, and share every course they've played.",
 };
 
 export default function About() {
   return (
-    <LegalPage eyebrow="About" title="The story behind The Clubhouse">
+    <LegalPage eyebrow="About" title="The story behind Your Clubhouse">
       <p>
-        <strong>The Clubhouse</strong> was built for golfers who actually care about
+        <strong>Your Clubhouse</strong> was built for golfers who actually care about
         the courses they play. Not scorecards. Not handicaps. The courses themselves —
         the design, the greens, the views, the story of the day, the friends you
         played with.
@@ -50,7 +50,7 @@ export default function About() {
       <h2>What it is</h2>
 
       <p>
-        The Clubhouse is a social app for logging, ranking, and sharing every round of
+        Your Clubhouse is a social app for logging, ranking, and sharing every round of
         golf you play. The core insight is simple: humans are bad at absolute ratings
         (&ldquo;is this a 7 or an 8?&rdquo;) but great at comparisons (&ldquo;which
         did you prefer — Pebble or Cypress?&rdquo;). We let you answer those
@@ -68,9 +68,25 @@ export default function About() {
       <h2>Who built it</h2>
 
       <p>
-        The Clubhouse is built by golfers, for golfers. We play the game, we chase
+        Your Clubhouse is built by golfers, for golfers. We play the game, we chase
         the lists, and we argue about the courses. If we wouldn&apos;t use a feature
         ourselves, it doesn&apos;t go in the app.
+      </p>
+
+      <p
+        style={{
+          marginTop: "28px",
+          marginBottom: "2px",
+          fontFamily: "var(--font-playfair), Georgia, serif",
+          fontStyle: "italic",
+          fontSize: "21px",
+          color: "var(--green-800)",
+        }}
+      >
+        — Drew Rubinstein
+      </p>
+      <p style={{ fontSize: "13px", color: "var(--text-muted)" }}>
+        Founder &amp; user #1 · @drew · home course: TPC Potomac at Avenel Farm
       </p>
 
       <h2>Get in touch</h2>

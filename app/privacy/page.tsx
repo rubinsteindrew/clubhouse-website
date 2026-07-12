@@ -2,18 +2,18 @@ import type { Metadata } from "next";
 import LegalPage from "@/components/LegalPage";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy — The Clubhouse",
-  description: "How The Clubhouse handles your personal data.",
+  title: "Privacy Policy — Your Clubhouse",
+  description: "How Your Clubhouse handles your personal data.",
 };
 
 export default function Privacy() {
   return (
     <LegalPage eyebrow="Legal" title="Privacy Policy" updated="April 2026">
       <p>
-        This Privacy Policy explains how The Clubhouse (&ldquo;we&rdquo;,
+        This Privacy Policy explains how Your Clubhouse (&ldquo;we&rdquo;,
         &ldquo;us&rdquo;) collects, uses, and protects your personal information
         when you use our mobile application and related services (the
-        &ldquo;Service&rdquo;). By using The Clubhouse, you agree to the practices
+        &ldquo;Service&rdquo;). By using Your Clubhouse, you agree to the practices
         described here.
       </p>
 
@@ -82,7 +82,7 @@ export default function Privacy() {
         </li>
         <li>
           <strong>Legal requirements:</strong> if required by law or to protect the
-          rights, safety, or property of The Clubhouse or our users.
+          rights, safety, or property of Your Clubhouse or our users.
         </li>
       </ul>
 
@@ -124,7 +124,7 @@ export default function Privacy() {
       <h2>7. Children&apos;s Privacy</h2>
 
       <p>
-        The Clubhouse is not intended for users under 13. We do not knowingly
+        Your Clubhouse is not intended for users under 13. We do not knowingly
         collect personal information from children under 13.
       </p>
 

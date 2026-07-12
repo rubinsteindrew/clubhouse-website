@@ -40,38 +40,6 @@ export default function SplashScreen({ children }: { children: React.ReactNode }
             overflow: "hidden",
           }}
         >
-          {/* Decorative concentric rings */}
-          <div
-            style={{
-              position: "absolute",
-              width: "600px",
-              height: "600px",
-              borderRadius: "50%",
-              border: "1px solid rgba(201,168,76,0.08)",
-              animation: "splash-ring 3s ease-out both",
-            }}
-          />
-          <div
-            style={{
-              position: "absolute",
-              width: "400px",
-              height: "400px",
-              borderRadius: "50%",
-              border: "1px solid rgba(201,168,76,0.12)",
-              animation: "splash-ring 3s ease-out 0.15s both",
-            }}
-          />
-          <div
-            style={{
-              position: "absolute",
-              width: "220px",
-              height: "220px",
-              borderRadius: "50%",
-              border: "1px solid rgba(201,168,76,0.18)",
-              animation: "splash-ring 3s ease-out 0.3s both",
-            }}
-          />
-
           {/* Center content */}
           <div
             style={{
@@ -92,17 +60,6 @@ export default function SplashScreen({ children }: { children: React.ReactNode }
                 height: "160px",
               }}
             >
-              {/* Glow behind logo — fades in once the pieces have landed */}
-              <div
-                style={{
-                  position: "absolute",
-                  inset: "-40px",
-                  borderRadius: "50%",
-                  background: "radial-gradient(circle, rgba(201,168,76,0.15) 0%, transparent 70%)",
-                  animation: "splash-glow 1.4s ease-in-out 1.15s both",
-                }}
-              />
-
               {/* C-ring — slides in from the left */}
               <Image
                 src="/assets/logo_main.png"
@@ -144,7 +101,7 @@ export default function SplashScreen({ children }: { children: React.ReactNode }
               {/* Ball — flies in from the right and bounces onto the green */}
               <Image
                 src="/assets/logo_ball.png"
-                alt="The Clubhouse"
+                alt="Your Clubhouse"
                 width={320}
                 height={320}
                 priority
@@ -178,7 +135,7 @@ export default function SplashScreen({ children }: { children: React.ReactNode }
                   lineHeight: 1.1,
                 }}
               >
-                The Clubhouse
+                Your Clubhouse
               </div>
 
               {/* Gold divider */}
@@ -278,24 +235,6 @@ export default function SplashScreen({ children }: { children: React.ReactNode }
           }
           100% {
             width: 48px;
-            opacity: 1;
-          }
-        }
-        @keyframes splash-ring {
-          0% {
-            opacity: 0;
-            transform: scale(0.7);
-          }
-          100% {
-            opacity: 1;
-            transform: scale(1);
-          }
-        }
-        @keyframes splash-glow {
-          0% {
-            opacity: 0;
-          }
-          100% {
             opacity: 1;
           }
         }

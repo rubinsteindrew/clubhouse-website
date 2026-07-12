@@ -2,16 +2,16 @@ import type { Metadata } from "next";
 import LegalPage from "@/components/LegalPage";
 
 export const metadata: Metadata = {
-  title: "Terms of Service — The Clubhouse",
-  description: "The terms governing your use of The Clubhouse.",
+  title: "Terms of Service — Your Clubhouse",
+  description: "The terms governing your use of Your Clubhouse.",
 };
 
 export default function Terms() {
   return (
     <LegalPage eyebrow="Legal" title="Terms of Service" updated="April 2026">
       <p>
-        Welcome to The Clubhouse. These Terms of Service (the
-        &ldquo;Terms&rdquo;) govern your access to and use of The Clubhouse
+        Welcome to Your Clubhouse. These Terms of Service (the
+        &ldquo;Terms&rdquo;) govern your access to and use of Your Clubhouse
         mobile application, website, and related services (together, the
         &ldquo;Service&rdquo;). By using the Service, you agree to these Terms.
         If you do not agree, please do not use the Service.
@@ -20,7 +20,7 @@ export default function Terms() {
       <h2>1. Eligibility</h2>
 
       <p>
-        You must be at least 13 years old to use The Clubhouse. By creating an
+        You must be at least 13 years old to use Your Clubhouse. By creating an
         account, you represent that you meet this age requirement and have the
         authority to agree to these Terms.
       </p>
@@ -40,7 +40,7 @@ export default function Terms() {
       <p>
         You retain ownership of the content you post — rounds, photos, ratings,
         comments, messages, and anything else (&ldquo;User Content&rdquo;). By
-        posting User Content, you grant The Clubhouse a worldwide, non-exclusive,
+        posting User Content, you grant Your Clubhouse a worldwide, non-exclusive,
         royalty-free license to host, display, and distribute that content as
         necessary to operate the Service.
       </p>
@@ -78,7 +78,7 @@ export default function Terms() {
       <h2>5. Course Data &amp; Ratings</h2>
 
       <p>
-        Course information displayed in The Clubhouse (including names,
+        Course information displayed in Your Clubhouse (including names,
         locations, photos, and Top 100 list membership) is compiled from public
         sources and user submissions. We make reasonable efforts to keep it
         accurate but cannot guarantee it is always complete or up to date.
@@ -86,7 +86,7 @@ export default function Terms() {
 
       <p>
         Individual ratings and rankings are a personal expression of preference
-        by our users. The Clubhouse Top 100 reflects aggregate community ratings
+        by our users. The Clubhouse 100 reflects aggregate community ratings
         and does not represent an official endorsement by any golf association.
       </p>
 
@@ -109,7 +109,7 @@ export default function Terms() {
       <h2>8. Limitation of Liability</h2>
 
       <p>
-        To the fullest extent permitted by law, The Clubhouse shall not be liable
+        To the fullest extent permitted by law, Your Clubhouse shall not be liable
         for any indirect, incidental, special, consequential, or punitive damages
         arising out of or related to your use of the Service.
       </p>

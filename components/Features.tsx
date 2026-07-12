@@ -111,7 +111,7 @@ export default function Features() {
             marginBottom: "64px",
           }}
         >
-          Everything your golf life needs.
+          Everything in the bag.
         </h2>
 
         <div

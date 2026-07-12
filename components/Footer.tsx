@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { APP_STORE_URL } from "@/lib/constants";
 
 export default function Footer() {
   const year = new Date().getFullYear();
@@ -36,7 +37,7 @@ export default function Footer() {
             <div style={{ marginBottom: "16px", display: "flex", alignItems: "center", gap: "12px" }}>
               <Image
                 src="/assets/Cream_Logo_Trans.png"
-                alt="The Clubhouse"
+                alt="Your Clubhouse"
                 width={44}
                 height={44}
                 style={{ objectFit: "contain", width: "44px", height: "44px", flexShrink: 0 }}
@@ -49,7 +50,7 @@ export default function Footer() {
                   color: "var(--bg)",
                 }}
               >
-                The Clubhouse
+                Your Clubhouse
               </span>
             </div>
             <p
@@ -88,10 +89,15 @@ export default function Footer() {
               >
                 Product
               </div>
-              {["Features", "How It Works", "Top 100", "Download"].map((link) => (
+              {[
+                { label: "The Clubhouse 100", href: "/#clubhouse-100" },
+                { label: "The App", href: "/#the-app" },
+                { label: "Features", href: "/features" },
+                { label: "Download", href: APP_STORE_URL },
+              ].map((link) => (
                 <a
-                  key={link}
-                  href={`#${link.toLowerCase().replace(/ /g, "-")}`}
+                  key={link.label}
+                  href={link.href}
                   style={{
                     display: "block",
                     fontFamily: "var(--font-dm-sans), sans-serif",
@@ -109,7 +115,7 @@ export default function Footer() {
                       "rgba(250,247,242,0.55)")
                   }
                 >
-                  {link}
+                  {link.label}
                 </a>
               ))}
             </div>
@@ -178,14 +184,14 @@ export default function Footer() {
               color: "rgba(250,247,242,0.3)",
             }}
           >
-            &copy; {year} The Clubhouse. All rights reserved.
+            &copy; {year} Your Clubhouse. All rights reserved.
           </span>
 
           {/* Social links */}
           <div style={{ display: "flex", gap: "16px" }}>
             {/* Instagram */}
             <a
-              href="https://www.instagram.com/theclubhousegolfapp/"
+              href="https://www.instagram.com/yourclubhousegolf/"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Instagram"

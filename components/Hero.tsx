@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useEffect, useRef } from "react";
+import { APP_STORE_URL } from "@/lib/constants";
 
 export default function Hero() {
   const heroRef = useRef<HTMLElement>(null);
@@ -50,46 +51,6 @@ export default function Hero() {
         overflow: "hidden",
       }}
     >
-      {/* Subtle texture / dot grid */}
-      <div
-        aria-hidden
-        style={{
-          position: "absolute",
-          inset: 0,
-          backgroundImage: `radial-gradient(circle, rgba(42,92,64,0.06) 1px, transparent 1px)`,
-          backgroundSize: "28px 28px",
-          pointerEvents: "none",
-        }}
-      />
-
-      {/* Gold accent arc */}
-      <div
-        aria-hidden
-        style={{
-          position: "absolute",
-          top: "-180px",
-          right: "-180px",
-          width: "600px",
-          height: "600px",
-          borderRadius: "50%",
-          border: "1.5px solid rgba(201,168,76,0.18)",
-          pointerEvents: "none",
-        }}
-      />
-      <div
-        aria-hidden
-        style={{
-          position: "absolute",
-          top: "-80px",
-          right: "-80px",
-          width: "400px",
-          height: "400px",
-          borderRadius: "50%",
-          border: "1.5px solid rgba(201,168,76,0.12)",
-          pointerEvents: "none",
-        }}
-      />
-
       <div
         style={{
           maxWidth: "1200px",
@@ -115,7 +76,7 @@ export default function Hero() {
           <div style={{ marginBottom: "28px", display: "flex", flexDirection: "column", alignItems: "center", gap: "14px" }}>
             <Image
               src="/assets/Green_Logo_Trans.png"
-              alt="The Clubhouse"
+              alt="Your Clubhouse"
               width={96}
               height={96}
               style={{ objectFit: "contain", width: "96px", height: "96px" }}
@@ -131,7 +92,7 @@ export default function Hero() {
                 letterSpacing: "-0.01em",
               }}
             >
-              The Clubhouse
+              Your Clubhouse
             </h1>
           </div>
 
@@ -186,7 +147,7 @@ export default function Hero() {
             Log every round. Rank every course. Share the rounds that mattered.
           </p>
 
-          {/* CTAs — disabled / coming soon */}
+          {/* CTAs — iOS live on the App Store, Android coming soon */}
           <div
             style={{
               display: "flex",
@@ -195,9 +156,9 @@ export default function Hero() {
               flexWrap: "wrap",
             }}
           >
-            {/* iOS — live */}
+            {/* iOS — live on the App Store */}
             <a
-              href="https://apps.apple.com/us/app/your-clubhouse/id6776061991"
+              href={APP_STORE_URL}
               target="_blank"
               rel="noopener noreferrer"
               style={{
@@ -208,12 +169,15 @@ export default function Hero() {
                 fontSize: "16px",
                 fontWeight: 600,
                 color: "#FAF7F2",
-                background: "var(--green-800)",
+                background: "var(--green-600)",
                 padding: "14px 28px",
                 borderRadius: "10px",
                 border: "none",
                 textDecoration: "none",
+                transition: "background 0.2s",
               }}
+              onMouseEnter={(e) => ((e.currentTarget as HTMLAnchorElement).style.background = "var(--green-700)")}
+              onMouseLeave={(e) => ((e.currentTarget as HTMLAnchorElement).style.background = "var(--green-600)")}
             >
               <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
@@ -271,53 +235,6 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* Social proof badge */}
-          <div
-            style={{
-              marginTop: "48px",
-              display: "inline-flex",
-              alignItems: "center",
-              gap: "10px",
-              padding: "10px 18px",
-              background: "var(--surface)",
-              border: "1px solid var(--border)",
-              borderRadius: "100px",
-              boxShadow: "0 1px 4px rgba(0,0,0,0.06)",
-            }}
-          >
-            <div style={{ display: "flex", gap: "-4px" }}>
-              {["#2A5C40", "#3D7A56", "#5A9E73"].map((color, i) => (
-                <div
-                  key={i}
-                  style={{
-                    width: "28px",
-                    height: "28px",
-                    borderRadius: "50%",
-                    background: color,
-                    border: "2px solid var(--surface)",
-                    marginLeft: i > 0 ? "-8px" : 0,
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                  }}
-                >
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="#FAF7F2">
-                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
-                  </svg>
-                </div>
-              ))}
-            </div>
-            <span
-              style={{
-                fontFamily: "var(--font-dm-sans), sans-serif",
-                fontSize: "13px",
-                fontWeight: 500,
-                color: "var(--text-secondary)",
-              }}
-            >
-              1,800+ courses rated in 2026
-            </span>
-          </div>
         </div>
 
         {/* Phone mockup */}
@@ -360,8 +277,8 @@ export default function Hero() {
                 }}
               >
                 <Image
-                  src="/assets/screenshots/Feed.jpg"
-                  alt="The Clubhouse app feed"
+                  src="/assets/screenshots/global-feed.jpg"
+                  alt="Your Clubhouse app feed"
                   fill
                   sizes="280px"
                   unoptimized
@@ -371,92 +288,11 @@ export default function Hero() {
                     t.style.display = "none";
                   }}
                 />
-                {/* Placeholder if no screenshot */}
+                {/* Fallback tint behind the screenshot (shows only if the image fails) */}
                 <div
-                  style={{
-                    position: "absolute",
-                    inset: 0,
-                    background: "var(--green-50)",
-                    display: "flex",
-                    flexDirection: "column",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    gap: "12px",
-                    padding: "24px",
-                  }}
-                >
-                  <Image
-                    src="/assets/Green_Logo_Trans.png"
-                    alt="The Clubhouse"
-                    width={64}
-                    height={64}
-                    style={{ objectFit: "contain", width: "52px", height: "52px" }}
-                  />
-                  <div
-                    style={{
-                      fontFamily: "var(--font-playfair), serif",
-                      fontSize: "18px",
-                      fontWeight: 700,
-                      color: "var(--green-700)",
-                      textAlign: "center",
-                    }}
-                  >
-                    The Clubhouse
-                  </div>
-                  <div style={{ width: "100%" }}>
-                    {[
-                      { label: "Pine Valley", rating: "10", rank: "1" },
-                      { label: "Augusta National", rating: "9.88", rank: "2" },
-                      { label: "Pebble Beach", rating: "9.76", rank: "3" },
-                      { label: "Cypress Point", rating: "9.92", rank: "4" },
-                    ].map((course) => (
-                      <div
-                        key={course.label}
-                        style={{
-                          display: "flex",
-                          alignItems: "center",
-                          justifyContent: "space-between",
-                          padding: "8px 0",
-                          borderBottom: "1px solid var(--border)",
-                        }}
-                      >
-                        <div style={{ display: "flex", gap: "8px", alignItems: "center" }}>
-                          <span
-                            style={{
-                              fontFamily: "var(--font-dm-sans), sans-serif",
-                              fontSize: "11px",
-                              color: "var(--text-muted)",
-                              fontWeight: 600,
-                              minWidth: "24px",
-                            }}
-                          >
-                            {course.rank}
-                          </span>
-                          <span
-                            style={{
-                              fontFamily: "var(--font-dm-sans), sans-serif",
-                              fontSize: "11px",
-                              fontWeight: 500,
-                              color: "var(--text-primary)",
-                            }}
-                          >
-                            {course.label}
-                          </span>
-                        </div>
-                        <span
-                          style={{
-                            fontFamily: "var(--font-dm-sans), sans-serif",
-                            fontSize: "11px",
-                            fontWeight: 700,
-                            color: "var(--gold)",
-                          }}
-                        >
-                          {course.rating}
-                        </span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
+                  aria-hidden
+                  style={{ position: "absolute", inset: 0, background: "var(--green-50)", zIndex: -1 }}
+                />
               </div>
             </div>
           </div>

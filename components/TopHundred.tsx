@@ -11,30 +11,18 @@ export default function TopHundred() {
         overflow: "hidden",
       }}
     >
-      {/* Decorative circles */}
+      {/* Soft radial glow — quiet, no busy shapes */}
       <div
         aria-hidden
         style={{
           position: "absolute",
-          top: "-120px",
-          left: "-120px",
-          width: "480px",
+          top: "-10%",
+          left: "50%",
+          transform: "translateX(-50%)",
+          width: "780px",
           height: "480px",
-          borderRadius: "50%",
-          border: "1px solid rgba(201,168,76,0.08)",
-          pointerEvents: "none",
-        }}
-      />
-      <div
-        aria-hidden
-        style={{
-          position: "absolute",
-          bottom: "-160px",
-          right: "-160px",
-          width: "560px",
-          height: "560px",
-          borderRadius: "50%",
-          border: "1px solid rgba(201,168,76,0.06)",
+          background:
+            "radial-gradient(ellipse at center, rgba(201,168,76,0.08) 0%, transparent 70%)",
           pointerEvents: "none",
         }}
       />
@@ -60,7 +48,7 @@ export default function TopHundred() {
             marginBottom: "16px",
           }}
         >
-          Top 100
+          Two Top 100s
         </p>
 
         <h2
@@ -75,9 +63,9 @@ export default function TopHundred() {
             marginBottom: "16px",
           }}
         >
-          Chase the classics.
+          Golf Digest&apos;s 100.
           <br />
-          <span style={{ color: "var(--gold)" }}>Build the new canon.</span>
+          <span style={{ color: "var(--gold)" }}>And ours.</span>
         </h2>
 
         <p
@@ -91,7 +79,7 @@ export default function TopHundred() {
             lineHeight: 1.65,
           }}
         >
-          The Clubhouse gives you two lists to benchmark against — a storied institution
+          Your Clubhouse gives you two lists to benchmark against — a storied institution
           and a living, breathing community ranking.
         </p>
 
@@ -185,7 +173,7 @@ export default function TopHundred() {
               }}
             >
               The definitive benchmark since 1966. Every course on Golf Digest&apos;s
-              official list earns a gold badge in The Clubhouse. How many have you played?
+              official list earns a gold badge in Your Clubhouse. How many have you played?
             </p>
 
             <div
@@ -283,7 +271,7 @@ export default function TopHundred() {
                 lineHeight: 1.3,
               }}
             >
-              The Clubhouse<br />Top 100
+              The Clubhouse<br />100
             </h3>
 
             <p

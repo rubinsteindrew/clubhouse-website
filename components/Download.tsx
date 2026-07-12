@@ -1,5 +1,7 @@
 "use client";
 
+import { APP_STORE_URL } from "@/lib/constants";
+
 export default function Download() {
   return (
     <section
@@ -34,7 +36,7 @@ export default function Download() {
             marginBottom: "40px",
           }}
         >
-          Download The Clubhouse. Log your first round. Rank your first course.
+          Download Your Clubhouse. Log your first round. Rank your first course.
           See where it lands.
         </p>
 
@@ -47,9 +49,9 @@ export default function Download() {
             marginBottom: "32px",
           }}
         >
-          {/* iOS — live */}
+          {/* iOS — live on the App Store */}
           <a
-            href="https://apps.apple.com/us/app/your-clubhouse/id6776061991"
+            href={APP_STORE_URL}
             target="_blank"
             rel="noopener noreferrer"
             style={{
@@ -65,6 +67,17 @@ export default function Download() {
               borderRadius: "10px",
               border: "none",
               textDecoration: "none",
+              transition: "transform 0.2s, box-shadow 0.2s",
+            }}
+            onMouseEnter={(e) => {
+              const el = e.currentTarget as HTMLAnchorElement;
+              el.style.transform = "translateY(-2px)";
+              el.style.boxShadow = "0 8px 24px rgba(0,0,0,0.28)";
+            }}
+            onMouseLeave={(e) => {
+              const el = e.currentTarget as HTMLAnchorElement;
+              el.style.transform = "translateY(0)";
+              el.style.boxShadow = "none";
             }}
           >
             <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">

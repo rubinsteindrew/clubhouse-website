@@ -166,7 +166,7 @@ export default function RankingSystem() {
             }}
           >
             Humans are bad at absolute ratings — is this a 7 or an 8? But we&apos;re
-            excellent at relative comparisons. The Clubhouse asks one question at a time:{" "}
+            excellent at relative comparisons. Your Clubhouse asks one question at a time:{" "}
             <em style={{ color: "var(--bg)", fontStyle: "italic" }}>
               which do you prefer?
             </em>{" "}
