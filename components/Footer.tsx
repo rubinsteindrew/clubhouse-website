@@ -137,6 +137,7 @@ export default function Footer() {
               {[
                 { label: "About", href: "/about" },
                 { label: "Privacy", href: "/privacy" },
+                { label: "Delete Account", href: "/delete-account" },
                 { label: "Terms", href: "/terms" },
                 { label: "Contact", href: "mailto:support@yourclubhouse.net?subject=Hello%20from%20The%20Clubhouse" },
               ].map((link) => (

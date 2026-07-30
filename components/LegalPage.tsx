@@ -142,7 +142,8 @@ export default function LegalPage({ eyebrow, title, updated, children }: Props) 
         .legal-body p {
           margin-bottom: 18px;
         }
-        .legal-body ul {
+        .legal-body ul,
+        .legal-body ol {
           margin-bottom: 18px;
           padding-left: 22px;
         }
