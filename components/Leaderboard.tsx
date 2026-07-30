@@ -16,16 +16,16 @@ type Course = {
 
 // The current Clubhouse Top 100 — top 10. Update by hand as it changes.
 const COURSES: Course[] = [
-  { name: "Kinloch Golf Club", loc: "Manakin-Sabot, Virginia", score: 9.12, access: "private" },
-  { name: "Congaree", loc: "Ridgeland, South Carolina", score: 9.11, access: "private" },
-  { name: "Punta Espada Golf Club", loc: "Punta Cana, La Altagracia", score: 9.10, access: "public" },
-  { name: "Quintero Golf and Country Club", loc: "Peoria, Arizona", score: 9.08, access: "public" },
-  { name: "Seminole Golf Club", loc: "Juno Beach, Florida", score: 9.08, access: "private" },
+  { name: "Punta Espada Golf Club", loc: "Punta Cana, La Altagracia", score: 9.23, access: "public" },
+  { name: "Quintero Golf and Country Club", loc: "Peoria, Arizona", score: 9.22, access: "public" },
+  { name: "Congaree", loc: "Ridgeland, South Carolina", score: 9.10, access: "private" },
+  { name: "Lost Rail Golf Club", loc: "Gretna, Nebraska", score: 9.08, access: "private" },
+  { name: "Seminole Golf Club", loc: "Juno Beach, Florida", score: 9.04, access: "private" },
+  { name: "Pinehurst CC – No. 2", loc: "Pinehurst, North Carolina", score: 9.04, access: "public" },
   { name: "Oakmont Country Club", loc: "Oakmont, Pennsylvania", score: 9.03, access: "private" },
-  { name: "Lost Rail Golf Club", loc: "Gretna, Nebraska", score: 8.97, access: "private" },
-  { name: "Kiawah Island Club – Cassique", loc: "Charleston, South Carolina", score: 8.95, access: "private" },
-  { name: "Old Barnwell", loc: "Windsor, South Carolina", score: 8.94, access: "private" },
-  { name: "Chambers Bay Golf Club", loc: "University Place, Washington", score: 8.91, access: "public" },
+  { name: "Pebble Beach Golf Links", loc: "Pebble Beach, California", score: 9.02, access: "public" },
+  { name: "Pine Valley Golf Club", loc: "Pine Valley, New Jersey", score: 9.01, access: "private" },
+  { name: "Kinloch Golf Club", loc: "Manakin-Sabot, Virginia", score: 9.01, access: "private" },
 ];
 
 function Digits({ score }: { score: number }) {
